@@ -44,11 +44,14 @@
   },
   "release": {
     "projects": [
-      "ext-template-contract"
+      "ext-docus-contract"
     ],
     "projectsRelationship": "fixed",
     "version": {
-      "preVersionCommand": "pnpm nx build ext-template-contract"
+      "conventionalCommits": true,
+      "fallbackCurrentVersionResolver": "disk",
+      "preVersionCommand": "pnpm exec nx run ext-docus-contract:build",
+      "versionActions": "@nx/js/src/release/version-actions"
     },
     "releaseTagPattern": "v{version}",
     "changelog": {

@@ -18,8 +18,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sneat/extension-template-contract": [
-        "./libs/extensions/template/contract/src/index.ts"
+      "@sneat/extension-docus-contract": [
+        "./libs/extensions/docus/contract/src/index.ts"
       ]
     }
   },

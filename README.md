@@ -1,19 +1,16 @@
-# sneat-ext-contract-template
+# ext-docus
 
-Template repository for creating a public `ext-<id>` contract repository.
+Public contract for the Sneat Docus extension.
 
 `frontend/` is the sole owner and publisher of
-`@sneat/extension-template-contract`. The paired implementation template is
-[`sneat-ext-template`](../sneat-ext-template); it consumes this package and owns
-the runtime/app code.
-
-For a new extension, create `ext-<id>` from this template, rename `template`,
-publish the contract, and then point the `<id>` implementation at that release.
+`@sneat/extension-docus-contract`. The private
+[`docus`](../docus) repository consumes this package and owns Docus's runtime,
+UI, and host application code.
 
 ## Layout
 
 ```text
 typespec/   # frozen wire contract
 backend/    # contract-facing Go definitions and checks
-frontend/   # @sneat/extension-<id>-contract workspace
+frontend/   # @sneat/extension-docus-contract workspace
 ```

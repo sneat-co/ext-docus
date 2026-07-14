@@ -1,0 +1,20 @@
+name: Publish package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - frontend/**
+      - .github/workflows/publish.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    uses: sneat-co/cicd/.github/workflows/npm-publish.yml@main
+    with:
+      working-directory: frontend
+      build-command: pnpm exec nx run ext-docus-contract:build
+      publish-command: pnpm exec nx release --yes && git push --follow-tags
+    secrets: inherit
